@@ -1,0 +1,42 @@
+{
+  "name": "@excalidraw-to-mermaid/core",
+  "description": "Excalidraw to mermaid converter core lib",
+  "version": "0.1.0",
+  "author": "Stanislav Karakovskii",
+  "license": "ISC",
+  "homepage": "https://github.com/YokiToki/excalidraw-to-mermaid",
+  "bugs": "https://github.com/YokiToki/excalidraw-to-mermaid/issues",
+  "type": "module",
+  "main": "dist/index.js",
+  "repository": "YokiToki/excalidraw-to-mermaid",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "shx rm -rf dist && tsc -b",
+    "lint": "eslint . --ext .ts",
+    "posttest": "yarn lint",
+    "test": "mocha"
+  },
+  "dependencies": {
+    "random-words": "^2.0.1"
+  },
+  "devDependencies": {
+    "@types/chai": "^4",
+    "@types/mocha": "^10",
+    "@types/node": "^18",
+    "chai": "^4",
+    "eslint": "^8",
+    "eslint-config-prettier": "^9",
+    "eslint-config-typescript": "^3",
+    "mocha": "^10",
+    "shx": "^0.3.4",
+    "tsx": "^4.19.1",
+    "typescript": "5.3.3"
+  },
+  "files": [
+    "/dist"
+  ],
+  "keywords": [
+    "excalidraw",
+    "mermaid"
+  ]
+}

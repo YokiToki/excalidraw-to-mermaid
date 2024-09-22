@@ -1,0 +1,62 @@
+{
+  "name": "@excalidraw-to-mermaid/cli",
+  "description": "CLI utility to convert .excalidraw JSON to .mermaid",
+  "version": "0.1.0",
+  "author": "Stanislav Karakovskii",
+  "license": "ISC",
+  "homepage": "https://github.com/YokiToki/excalidraw-to-mermaid",
+  "bugs": "https://github.com/YokiToki/excalidraw-to-mermaid/issues",
+  "type": "module",
+  "main": "dist/index.js",
+  "repository": "YokiToki/excalidraw-to-mermaid",
+  "types": "dist/index.d.ts",
+  "bin": {
+    "excalidraw-to-mermaid": "./bin/run.js"
+  },
+  "scripts": {
+    "run:dev": "./bin/dev.js",
+    "run:prod": "./bin/run.js",
+    "build": "shx rm -rf dist && tsc -b",
+    "lint": "eslint . --ext .ts",
+    "postpack": "shx rm -f oclif.manifest.json",
+    "posttest": "yarn lint",
+    "prepack": "oclif manifest && oclif readme",
+    "test": "mocha",
+    "version": "oclif readme && git add README.md"
+  },
+  "dependencies": {
+    "@excalidraw-to-mermaid/core": "0.1.0",
+    "@oclif/core": "^4",
+    "@oclif/plugin-help": "^6"
+  },
+  "devDependencies": {
+    "@oclif/prettier-config": "^0.2.1",
+    "@oclif/test": "^4",
+    "@types/chai": "^4",
+    "@types/mocha": "^10",
+    "@types/node": "^18",
+    "chai": "^4",
+    "eslint": "^8",
+    "eslint-config-oclif": "^5",
+    "eslint-config-oclif-typescript": "^3",
+    "eslint-config-prettier": "^9",
+    "mocha": "^10",
+    "oclif": "^4",
+    "shx": "^0.3.4",
+    "tsx": "^4.19.1",
+    "typescript": "5.3.3"
+  },
+  "files": [
+    "/bin",
+    "/dist",
+    "/oclif.manifest.json"
+  ],
+  "keywords": [
+    "oclif",
+    "excalidraw",
+    "mermaid"
+  ],
+  "installConfig": {
+    "hoistingLimits": "workspaces"
+  }
+}
