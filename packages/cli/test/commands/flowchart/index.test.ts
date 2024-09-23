@@ -5,7 +5,7 @@ const EXPECTED_EXAMPLE_OUTPUT = `flowchart TD\n  \tRADIO[Christmas] --> |Get mon
 
 describe('flowchart', () => {
   it('runs flowchart', async () => {
-    const {stdout} = await runCommand('flowchart example.excalidraw -s');
+    const {stdout} = await runCommand('flowchart ./test/commands/flowchart/example.excalidraw -s -d TD');
     expect(stdout).to.contain(EXPECTED_EXAMPLE_OUTPUT);
   })
 })
