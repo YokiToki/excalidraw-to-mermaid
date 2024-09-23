@@ -20,5 +20,6 @@ jobs:
           node-version: ${{ matrix.node_version }}
           cache: yarn
       - run: yarn
-      - run: yarn workspaces run build
+      - run: yarn workspace @excalidraw-to-mermaid/core build
+      - run: yarn workspace @excalidraw-to-mermaid/cli build
       - run: yarn workspaces run test --ci

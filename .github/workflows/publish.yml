@@ -13,8 +13,11 @@ jobs:
         with:
           node-version: latest
 
-      - name: Build
-        run: yarn workspaces run build
+      - name: Build core
+        run: yarn workspace @excalidraw-to-mermaid/core build
+
+      - name: Build CLI
+        run: yarn workspace @excalidraw-to-mermaid/cli build
 
       - name: Publish core 🚀
         run: yarn workspace @excalidraw-to-mermaid/core publish
