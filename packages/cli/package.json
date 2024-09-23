@@ -18,6 +18,7 @@
     "run:prod": "./bin/run.js",
     "build": "shx rm -rf dist && tsc -b",
     "lint": "eslint . --ext .ts",
+    "lint:fix": "eslint . --fix --ext .ts",
     "postpack": "shx rm -f oclif.manifest.json",
     "posttest": "yarn lint",
     "prepack": "oclif manifest && oclif readme",
@@ -55,8 +56,5 @@
     "oclif",
     "excalidraw",
     "mermaid"
-  ],
-  "installConfig": {
-    "hoistingLimits": "workspaces"
-  }
+  ]
 }
