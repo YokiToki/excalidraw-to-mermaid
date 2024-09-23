@@ -1,4 +1,5 @@
-name: tests
+name: Tests
+
 on:
   push:
     branches-ignore: [main]
@@ -19,5 +20,5 @@ jobs:
           node-version: ${{ matrix.node_version }}
           cache: yarn
       - run: yarn
-      - run: yarn build
-      - run: yarn test
+      - run: yarn workspaces run build
+      - run: yarn workspaces run test --ci

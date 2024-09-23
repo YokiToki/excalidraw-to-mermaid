@@ -1,4 +1,4 @@
-name: publish
+name: Publish
 
 on:
   release:
@@ -12,7 +12,16 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: latest
-      - run: yarn
-      - uses: JS-DevTools/npm-publish@19c28f1ef146469e409470805ea4279d47c3d35c
-        with:
-          token: ${{ secrets.NPM_TOKEN }}
+
+      - name: Build
+        run: yarn workspaces run build
+
+      - name: Publish core 🚀
+        run: yarn workspace @excalidraw-to-mermaid/core publish
+        env:
+          YARN_NPM_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+
+      - name: Publish CLI 🚀
+        run: yarn workspace @excalidraw-to-mermaid/cli publish
+        env:
+          YARN_NPM_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
