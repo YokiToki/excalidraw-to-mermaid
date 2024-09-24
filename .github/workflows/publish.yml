@@ -28,9 +28,9 @@ jobs:
       - name: Publish core 🚀
         run: yarn workspace @excalidraw-to-mermaid/core publish
         env:
-          YARN_NPM_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
 
       - name: Publish CLI 🚀
         run: yarn workspace @excalidraw-to-mermaid/cli publish
         env:
-          YARN_NPM_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
