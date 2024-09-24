@@ -13,6 +13,7 @@ jobs:
         with:
           node-version: latest
           always-auth: true
+          registry-url: 'https://registry.npmjs.org'
 
       - name: Dependencies core
         run: yarn workspace @excalidraw-to-mermaid/core install
@@ -26,7 +27,7 @@ jobs:
       - name: Build CLI
         run: yarn workspace @excalidraw-to-mermaid/cli build
 
-      - run: echo "//registry.npmjs.org/:_authToken=${{ secrets.NPM_AUTH_TOKEN }}" > ~/.npmrc
+      - run: echo "//registry.npmjs.org/:_authToken=${{ secrets.NPM_TOKEN }}" > ~/.npmrc
 
       - name: Publish core 🚀
         run: yarn workspace @excalidraw-to-mermaid/core publish
