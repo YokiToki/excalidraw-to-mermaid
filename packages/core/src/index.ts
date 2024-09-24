@@ -1,3 +1,3 @@
-export * from "./excalidraw2Mermaid";
-export * from "./types";
-export * from "./mermaidFlowChart";
+export * from "./excalidraw2Mermaid.js";
+export * from "./types.js";
+export * from "./mermaidFlowChart.js";

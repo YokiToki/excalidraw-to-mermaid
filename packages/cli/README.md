@@ -29,7 +29,34 @@ USAGE
 <!-- usagestop -->
 # Commands
 <!-- commands -->
+* [`excalidraw-to-mermaid flowchart INPUT`](#excalidraw-to-mermaid-flowchart-input)
 * [`excalidraw-to-mermaid help [COMMAND]`](#excalidraw-to-mermaid-help-command)
+
+## `excalidraw-to-mermaid flowchart INPUT`
+
+Converts .excalidraw file to .mermaid file
+
+```
+USAGE
+  $ excalidraw-to-mermaid flowchart INPUT [-d TD|TB|BT|RL|LR] [-o <value>] [-s]
+
+ARGUMENTS
+  INPUT  Input .excalidraw file
+
+FLAGS
+  -d, --direction=<option>  [default: TD] Direction of mermaid flowchart
+                            <options: TD|TB|BT|RL|LR>
+  -o, --output=<value>      Output .mermaid file name
+  -s, --stdout              Write output to stdout
+
+DESCRIPTION
+  Converts .excalidraw file to .mermaid file
+
+EXAMPLES
+  $ excalidraw-to-mermaid flowchart input.excalidraw -o output.mermaid
+```
+
+_See code: [src/commands/flowchart/index.ts](https://github.com/YokiToki/excalidraw-to-mermaid/blob/v0.1.0/src/commands/flowchart/index.ts)_
 
 ## `excalidraw-to-mermaid help [COMMAND]`
 

@@ -3,9 +3,10 @@
   "version": "0.1.0",
   "description": "Excalidraw to mermaid monorepo",
   "private": true,
-  "workspaces": [
-    "packages/*"
-  ],
+  "workspaces": {
+    "packages": ["packages/*"],
+    "nohoist": ["**/@excalidraw-to-mermaid/core"]
+  },
   "engines": {
     "node": ">=18.0.0"
   }
