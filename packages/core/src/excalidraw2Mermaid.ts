@@ -4,9 +4,9 @@ import {
   ExcalidrawJson,
   ExcalidrawLinearElement,
   ExcalidrawTextElement
-} from "./types";
+} from "./types.js";
 import {generate} from "random-words";
-import {MermaidFlowChart, MermaidFlowChartDirection, MermaidFlowChartLine, MermaidNodeType} from "./mermaidFlowChart";
+import {MermaidFlowChart, MermaidFlowChartDirection, MermaidFlowChartLine, MermaidNodeType} from "./mermaidFlowChart.js";
 
 function notEmpty<T>(value: T | null | undefined): value is T {
   return value !== null && value !== undefined;
