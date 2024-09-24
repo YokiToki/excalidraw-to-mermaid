@@ -13,6 +13,12 @@ jobs:
         with:
           node-version: latest
 
+      - name: Dependencies core
+        run: yarn workspace @excalidraw-to-mermaid/core install
+
+      - name: Dependencies CLI
+        run: yarn workspace @excalidraw-to-mermaid/cli install
+
       - name: Build core
         run: yarn workspace @excalidraw-to-mermaid/core build
 
